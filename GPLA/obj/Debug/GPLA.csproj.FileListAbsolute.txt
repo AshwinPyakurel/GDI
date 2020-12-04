@@ -1,0 +1,60 @@
+D:\learning\BTS\GPLA\GPLA\obj\Debug\GPLA.csprojAssemblyReference.cache
+D:\learning\BTS\GPLA\GPLA\obj\Debug\GPLA.frmGPLA.resources
+D:\learning\BTS\GPLA\GPLA\obj\Debug\GPLA.Properties.Resources.resources
+D:\learning\BTS\GPLA\GPLA\obj\Debug\GPLA.csproj.GenerateResource.cache
+D:\learning\BTS\GPLA\GPLA\obj\Debug\GPLA.csproj.CoreCompileInputs.cache
+D:\learning\BTS\GPLA\GPLA\bin\Debug\GPLA.exe.config
+D:\learning\BTS\GPLA\GPLA\bin\Debug\GPLA.exe
+D:\learning\BTS\GPLA\GPLA\bin\Debug\GPLA.pdb
+D:\learning\BTS\GPLA\GPLA\bin\Debug\Antlr3.Runtime.dll
+D:\learning\BTS\GPLA\GPLA\bin\Debug\Antlr4.Runtime.Standard.dll
+D:\learning\BTS\GPLA\GPLA\bin\Debug\Antlr3.Runtime.pdb
+D:\learning\BTS\GPLA\GPLA\bin\Debug\Antlr4.Runtime.Standard.xml
+D:\learning\BTS\GPLA\GPLA\obj\Debug\GPLA.csproj.CopyComplete
+D:\learning\BTS\GPLA\GPLA\obj\Debug\GPLA.exe
+D:\learning\BTS\GPLA\GPLA\obj\Debug\GPLA.pdb
+G:\GPLA\GPLA\bin\Debug\GPLA.exe.config
+G:\GPLA\GPLA\bin\Debug\GPLA.xml
+G:\GPLA\GPLA\bin\Debug\GPLA.exe
+G:\GPLA\GPLA\bin\Debug\GPLA.pdb
+G:\GPLA\GPLA\bin\Debug\Antlr3.Runtime.dll
+G:\GPLA\GPLA\bin\Debug\Antlr4.Runtime.Standard.dll
+G:\GPLA\GPLA\bin\Debug\Antlr3.Runtime.pdb
+G:\GPLA\GPLA\bin\Debug\Antlr4.Runtime.Standard.xml
+G:\GPLA\GPLA\obj\Debug\GPLA.csprojAssemblyReference.cache
+G:\GPLA\GPLA\obj\Debug\GPLA.frmGPLA.resources
+G:\GPLA\GPLA\obj\Debug\GPLA.Properties.Resources.resources
+G:\GPLA\GPLA\obj\Debug\GPLA.csproj.GenerateResource.cache
+G:\GPLA\GPLA\obj\Debug\GPLA.csproj.CopyComplete
+G:\GPLA\GPLA\obj\Debug\GPLA.exe
+G:\GPLA\GPLA\obj\Debug\GPLA.pdb
+D:\TBC\Semester 7 & 8\ASE\GPLA\GPLA\bin\Debug\GPLA.exe.config
+D:\TBC\Semester 7 & 8\ASE\GPLA\GPLA\bin\Debug\GPLA.xml
+D:\TBC\Semester 7 & 8\ASE\GPLA\GPLA\bin\Debug\GPLA.exe
+D:\TBC\Semester 7 & 8\ASE\GPLA\GPLA\bin\Debug\GPLA.pdb
+D:\TBC\Semester 7 & 8\ASE\GPLA\GPLA\bin\Debug\Antlr3.Runtime.dll
+D:\TBC\Semester 7 & 8\ASE\GPLA\GPLA\bin\Debug\Antlr4.Runtime.Standard.dll
+D:\TBC\Semester 7 & 8\ASE\GPLA\GPLA\bin\Debug\Antlr3.Runtime.pdb
+D:\TBC\Semester 7 & 8\ASE\GPLA\GPLA\bin\Debug\Antlr4.Runtime.Standard.xml
+D:\TBC\Semester 7 & 8\ASE\GPLA\GPLA\obj\Debug\GPLA.csprojAssemblyReference.cache
+D:\TBC\Semester 7 & 8\ASE\GPLA\GPLA\obj\Debug\GPLA.frmGPLA.resources
+D:\TBC\Semester 7 & 8\ASE\GPLA\GPLA\obj\Debug\GPLA.Properties.Resources.resources
+D:\TBC\Semester 7 & 8\ASE\GPLA\GPLA\obj\Debug\GPLA.csproj.GenerateResource.cache
+D:\TBC\Semester 7 & 8\ASE\GPLA\GPLA\obj\Debug\GPLA.csproj.CopyComplete
+D:\TBC\Semester 7 & 8\ASE\GPLA\GPLA\obj\Debug\GPLA.exe
+D:\TBC\Semester 7 & 8\ASE\GPLA\GPLA\obj\Debug\GPLA.pdb
+C:\Users\Acer\Desktop\GPLA\GPLA\bin\Debug\GPLA.exe.config
+C:\Users\Acer\Desktop\GPLA\GPLA\bin\Debug\GPLA.xml
+C:\Users\Acer\Desktop\GPLA\GPLA\bin\Debug\GPLA.exe
+C:\Users\Acer\Desktop\GPLA\GPLA\bin\Debug\GPLA.pdb
+C:\Users\Acer\Desktop\GPLA\GPLA\bin\Debug\Antlr3.Runtime.dll
+C:\Users\Acer\Desktop\GPLA\GPLA\bin\Debug\Antlr4.Runtime.Standard.dll
+C:\Users\Acer\Desktop\GPLA\GPLA\bin\Debug\Antlr3.Runtime.pdb
+C:\Users\Acer\Desktop\GPLA\GPLA\bin\Debug\Antlr4.Runtime.Standard.xml
+C:\Users\Acer\Desktop\GPLA\GPLA\obj\Debug\GPLA.csprojAssemblyReference.cache
+C:\Users\Acer\Desktop\GPLA\GPLA\obj\Debug\GPLA.frmGPLA.resources
+C:\Users\Acer\Desktop\GPLA\GPLA\obj\Debug\GPLA.Properties.Resources.resources
+C:\Users\Acer\Desktop\GPLA\GPLA\obj\Debug\GPLA.csproj.GenerateResource.cache
+C:\Users\Acer\Desktop\GPLA\GPLA\obj\Debug\GPLA.csproj.CopyComplete
+C:\Users\Acer\Desktop\GPLA\GPLA\obj\Debug\GPLA.exe
+C:\Users\Acer\Desktop\GPLA\GPLA\obj\Debug\GPLA.pdb

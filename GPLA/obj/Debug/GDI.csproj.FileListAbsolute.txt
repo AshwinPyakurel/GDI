@@ -1,0 +1,32 @@
+F:\TBC\ASD\Assingment\New folder\ASE\GPLA\bin\Debug\GPLA.exe.config
+F:\TBC\ASD\Assingment\New folder\ASE\GPLA\bin\Debug\GPLA.xml
+F:\TBC\ASD\Assingment\New folder\ASE\GPLA\bin\Debug\GPLA.exe
+F:\TBC\ASD\Assingment\New folder\ASE\GPLA\bin\Debug\GPLA.pdb
+F:\TBC\ASD\Assingment\New folder\ASE\GPLA\bin\Debug\Antlr3.Runtime.dll
+F:\TBC\ASD\Assingment\New folder\ASE\GPLA\bin\Debug\Antlr4.Runtime.Standard.dll
+F:\TBC\ASD\Assingment\New folder\ASE\GPLA\bin\Debug\Antlr3.Runtime.pdb
+F:\TBC\ASD\Assingment\New folder\ASE\GPLA\bin\Debug\Antlr4.Runtime.Standard.xml
+F:\TBC\ASD\Assingment\New folder\ASE\GPLA\obj\Debug\GDI.csprojAssemblyReference.cache
+F:\TBC\ASD\Assingment\New folder\ASE\GPLA\obj\Debug\GPLA.frmGDI.resources
+F:\TBC\ASD\Assingment\New folder\ASE\GPLA\obj\Debug\GPLA.Properties.Resources.resources
+F:\TBC\ASD\Assingment\New folder\ASE\GPLA\obj\Debug\GDI.csproj.GenerateResource.cache
+F:\TBC\ASD\Assingment\New folder\ASE\GPLA\obj\Debug\GDI.csproj.CoreCompileInputs.cache
+F:\TBC\ASD\Assingment\New folder\ASE\GPLA\obj\Debug\GDI.csproj.CopyComplete
+F:\TBC\ASD\Assingment\New folder\ASE\GPLA\obj\Debug\GPLA.exe
+F:\TBC\ASD\Assingment\New folder\ASE\GPLA\obj\Debug\GPLA.pdb
+C:\Users\Ashwin\Desktop\GDI\GPLA\bin\Debug\GPLA.exe.config
+C:\Users\Ashwin\Desktop\GDI\GPLA\bin\Debug\GPLA.xml
+C:\Users\Ashwin\Desktop\GDI\GPLA\bin\Debug\GPLA.exe
+C:\Users\Ashwin\Desktop\GDI\GPLA\bin\Debug\GPLA.pdb
+C:\Users\Ashwin\Desktop\GDI\GPLA\bin\Debug\Antlr3.Runtime.dll
+C:\Users\Ashwin\Desktop\GDI\GPLA\bin\Debug\Antlr4.Runtime.Standard.dll
+C:\Users\Ashwin\Desktop\GDI\GPLA\bin\Debug\Antlr3.Runtime.pdb
+C:\Users\Ashwin\Desktop\GDI\GPLA\bin\Debug\Antlr4.Runtime.Standard.xml
+C:\Users\Ashwin\Desktop\GDI\GPLA\obj\Debug\GDI.csprojAssemblyReference.cache
+C:\Users\Ashwin\Desktop\GDI\GPLA\obj\Debug\GPLA.frmGDI.resources
+C:\Users\Ashwin\Desktop\GDI\GPLA\obj\Debug\GPLA.Properties.Resources.resources
+C:\Users\Ashwin\Desktop\GDI\GPLA\obj\Debug\GDI.csproj.GenerateResource.cache
+C:\Users\Ashwin\Desktop\GDI\GPLA\obj\Debug\GDI.csproj.CoreCompileInputs.cache
+C:\Users\Ashwin\Desktop\GDI\GPLA\obj\Debug\GDI.csproj.CopyComplete
+C:\Users\Ashwin\Desktop\GDI\GPLA\obj\Debug\GPLA.exe
+C:\Users\Ashwin\Desktop\GDI\GPLA\obj\Debug\GPLA.pdb
