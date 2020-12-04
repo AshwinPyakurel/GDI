@@ -7,10 +7,8 @@ using System.Windows.Forms;
 namespace GPLA
 {
     static class Program
-    {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+    {        
+        /// Main file for application       
         [STAThread]
         static void Main()
         {

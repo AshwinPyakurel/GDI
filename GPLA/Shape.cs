@@ -9,15 +9,9 @@ namespace GPLA
 {
     public abstract class Shape
     {
-        //variable declaration and initialization
+        //variable declared and initialized
         protected int x = 0, y = 0, z = 0;
 
-
-        /// <summary>
-        /// parameterized constructor
-        /// </summary>
-        /// <param name="x"></param>
-        /// <param name="y"></param>
         public Shape(int x, int y)
         {
             this.x = x;
@@ -30,60 +24,32 @@ namespace GPLA
             this.y = y;
             this.z = z;
         }
-
-        /// <summary>
-        /// default constructor
-        /// </summary>
+        
+        /// default constructor        
         public Shape()
         {
         }
-
-
-        /// <summary>
-        /// X setter
-        /// </summary>
-        /// <param name="x"></param>
+        //start of getter setter
         public void setX(int x)
         {
             this.x = x;
         }
-
-
-        /// <summary>
-        /// X getter
-        /// </summary>
-        /// <returns></returns>
         public int getX()
         {
             return x;
         }
 
-
-        /// <summary>
-        /// Y setter
-        /// </summary>
-        /// <param name="y"></param>
         public void setY(int y)
         {
             this.y = y;
         }
-
-
-
-        /// <summary>
-        /// Y getter
-        /// </summary>
-        /// <returns></returns>
         public int getY()
         {
             return y;
         }
-
-
-        /// <summary>
+        ///end of getter setter
         /// draw method
-        /// </summary>
-        /// <param name="g"></param>
+
         public abstract void draw(Graphics g, Color c, int thickness);
     }
 }

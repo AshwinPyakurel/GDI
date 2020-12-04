@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace GPLA
 {    
-    /// simple shape factory definition class
+    /// ShapeFactoryDefination class created
     public class ShapeFactoryDefination
     {        
-        /// method to check if shape is circle        
+        /// Check if desired shape is circle or not
         public bool isCircle(string shape)
         {
             if (shape == "circle")
@@ -20,11 +20,8 @@ namespace GPLA
         }
 
 
-        /// <summary>
-        /// method to check if shape is rectangle
-        /// </summary>
-        /// <param name="shape"></param>
-        /// <returns></returns>
+
+        /// Check if desired shape is rectangle or not
         public bool isRectangle(string shape)
         {
             if (shape == "rectangle")
@@ -33,14 +30,6 @@ namespace GPLA
             }
             return false;
         }
-
-        public bool isTriangle(string shape)
-        {
-            if (shape == "triangle")
-            {
-                return true;
-            }
-            return false;
-        }
+      
     }
 }

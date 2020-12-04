@@ -118,12 +118,12 @@ namespace GPLA
                             char[] code_delimiters = new char[] { ' ' };
                             words = code_line.Split(code_delimiters, StringSplitOptions.RemoveEmptyEntries); //holds invididuals code line
 
-                            //condition to check if "draw" then
+                            //check if draw or not
                             if (words[0].Equals("draw"))
                             {
-                                if (words[1] == "circle") // condition to check if "circle" then
+                                if (words[1] == "circle") // check if its is circle or not
                                 {
-                                    if (!(words.Length == 3)) //checks if written code is correct or not
+                                    if (!(words.Length == 3)) //Check for the user input command
                                     {
                                         MessageBox.Show("Enter correct command and parameter");
                                         console_text += "View the correct Command: \n e.g. draw circle 100 or draw circle r \n\n";
@@ -152,7 +152,7 @@ namespace GPLA
                                 if (words[1].Equals("rectangle")) // 
                                 {
                                     //MessageBox.Show(moveX.ToString());
-                                    if (!(words.Length == 4)) //extending parameter values
+                                    if (!(words.Length == 4)) //Parameter value check
                                     {
                                         MessageBox.Show("Enter correct command");
                                         console_text += "View the correct Command:: \n e.g. draw rectangle 100 100 or draw circle h w \n\n";
@@ -184,10 +184,10 @@ namespace GPLA
                                     drawPolgon = true;
                                 }
                             }
-                            if (words[0] == "move") // condition to check if "move" then
+                            if (words[0] == "move") // check if moved or not
                             {
                                 if (Convert.ToInt32(words[1]) == shapeMovement.Location.X &&
-                                    Convert.ToInt32(words[2]) == shapeMovement.Location.Y)//checks cursor position
+                                    Convert.ToInt32(words[2]) == shapeMovement.Location.Y)//Cursor Position check
                                 {
                                     //MessageBox.Show("don't move");
                                     console_text += "Its in requested position\n\n";
@@ -238,7 +238,7 @@ namespace GPLA
                     {
                         console_text += "!!Please input correct parameter!!\n\n";
                     }
-                    pnl_DisplayOutput.Refresh(); //refresh with every drawing equals to true
+                    pnl_DisplayOutput.Refresh(); //Refreshes while each shapes is drawn
                     break;
                 case "clear":
                     circleObjects.Clear();
@@ -262,14 +262,14 @@ namespace GPLA
 
         private void Panel_output_Paint(object sender, PaintEventArgs e)
         {
-            //Graphics to draw in panel
+            //Panel 
             Graphics g = e.Graphics;
-            if (drawCircle == true)//draw circle condition
+            if (drawCircle == true)//Create a circle
             {
                 foreach (Circle circleObject in circleObjects)
                 {
                     console_text += "Drawing Circle\n\n";
-                    circleObject.draw(g, c, thickness); //draw circle with given graphics
+                    circleObject.draw(g, c, thickness); //circle creation
                 }
             }
 
@@ -278,7 +278,7 @@ namespace GPLA
                 foreach (Rectangle rectangleObject in rectangleObjects)
                 {
                     console_text += "Drawing Rectangle\n\n";
-                    rectangleObject.draw(g, c, thickness); //draw circle with given graphics
+                    rectangleObject.draw(g, c, thickness); //rectangle creation
                 }
             }
 

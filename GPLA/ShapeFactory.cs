@@ -6,16 +6,11 @@ using System.Threading.Tasks;
 
 namespace GPLA
 {
-    /// <summary>
-    /// Factory class to get required shape
-    /// </summary>
+   
+    /// ShapeFactory class interits AbstractFactory
     public class ShapeFactory : AbstractFactory
     {
-        /// <summary>
-        /// Method to get required shape
-        /// </summary>
-        /// <param name="shapeType"></param>
-        /// <returns></returns>
+        /// Method to get required shape       
         public override Shape getShape(String shapeType)
         {
             if (shapeType == null)

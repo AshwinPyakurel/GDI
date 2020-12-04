@@ -7,17 +7,12 @@ using System.Threading.Tasks;
 namespace GPLA
 {
 
-    /// <summary>
-    /// Simple Factory definition class
-    /// </summary>
+   
+    /// Factory definition class created
     public class FactoryProducerDefination
     {
-
-        /// <summary>
-        /// checks whether the type is shape or color
-        /// </summary>
-        /// <param name="type"></param>
-        /// <returns></returns>
+        
+        /// checks for shape or color to be made        
         public bool isShape(string type)
         {
             if (type == "shape")

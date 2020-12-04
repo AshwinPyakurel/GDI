@@ -8,9 +8,7 @@ namespace GPLA
 {
     class FactoryProducer
     {        
-        /// method to create factory of different type like shape, color        
-        /// <param name="choice"></param>
-        /// <returns></returns>
+        /// Factory Creation                
         public static AbstractFactory getFactory(String choice)
         {
             //if condition to check if choice is shape or color

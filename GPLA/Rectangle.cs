@@ -32,54 +32,34 @@ namespace GPLA
         }
 
 
-        /// <summary>
-        /// draw method
-        /// </summary>
-        /// <param name="g"></param>
+        /// draw method created
         public override void draw(Graphics g, Color c, int thickness)
         {
             Pen p = new Pen(c, thickness);
             g.DrawRectangle(p, x, y, height, width);
         }
 
-
-        /// <summary>
-        /// height setter
-        /// </summary>
-        /// <param name="height"></param>
+        
+        // Start or getter setter      
         public void setHeight(int height)
         {
             this.height = height;
         }
 
-
-        /// <summary>
-        /// height getter
-        /// </summary>
-        /// <returns></returns>
+        
         public int getHeight()
         {
             return this.height;
         }
-
-        /// <summary>
-        /// width setter
-        /// </summary>
-        /// <param name="width"></param>
         public void setWidth(int width)
         {
             this.width = width;
         }
-
-
-        /// <summary>
-        /// width getter
-        /// </summary>
-        /// <returns></returns>
         public int getWidth()
         {
             return this.width;
         }
+        //end of getter setter
 
     }
 }

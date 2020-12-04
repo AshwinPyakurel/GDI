@@ -14,21 +14,13 @@
             draw method       
         </member>
         <member name="M:GPLA.FactoryProducer.getFactory(System.String)">
-            method to create factory of different type like shape, color        
-            <param name="choice"></param>
-            <returns></returns>
+            Factory Creation                
         </member>
         <member name="T:GPLA.FactoryProducerDefination">
-            <summary>
-            Simple Factory definition class
-            </summary>
+            Factory definition class created
         </member>
         <member name="M:GPLA.FactoryProducerDefination.isShape(System.String)">
-            <summary>
-            checks whether the type is shape or color
-            </summary>
-            <param name="type"></param>
-            <returns></returns>
+            checks for shape or color to be made        
         </member>
         <member name="F:GPLA.frmGDI.components">
             <summary>
@@ -48,24 +40,16 @@
             </summary>
         </member>
         <member name="T:GPLA.MoveDirection">
-            <summary>
-            move direction class 
-            </summary>
+            Move direction class created
         </member>
         <member name="M:GPLA.MoveDirection.#ctor">
-            <summary>
-            move default constructor
-            </summary>
+            default constructor
         </member>
         <member name="P:GPLA.MoveDirection.x">
-            <summary>
-            getter and setter
-            </summary>
+            getter and setter      
         </member>
         <member name="M:GPLA.Program.Main">
-            <summary>
-            The main entry point for the application.
-            </summary>
+            Main file for application       
         </member>
         <member name="M:GPLA.Rectangle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
             Parameterized constructor        
@@ -77,101 +61,29 @@
             default constructor       
         </member>
         <member name="M:GPLA.Rectangle.draw(System.Drawing.Graphics,System.Drawing.Color,System.Int32)">
-            <summary>
-            draw method
-            </summary>
-            <param name="g"></param>
-        </member>
-        <member name="M:GPLA.Rectangle.setHeight(System.Int32)">
-            <summary>
-            height setter
-            </summary>
-            <param name="height"></param>
-        </member>
-        <member name="M:GPLA.Rectangle.getHeight">
-            <summary>
-            height getter
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:GPLA.Rectangle.setWidth(System.Int32)">
-            <summary>
-            width setter
-            </summary>
-            <param name="width"></param>
-        </member>
-        <member name="M:GPLA.Rectangle.getWidth">
-            <summary>
-            width getter
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:GPLA.Shape.#ctor(System.Int32,System.Int32)">
-            <summary>
-            parameterized constructor
-            </summary>
-            <param name="x"></param>
-            <param name="y"></param>
+            draw method created
         </member>
         <member name="M:GPLA.Shape.#ctor">
-            <summary>
-            default constructor
-            </summary>
-        </member>
-        <member name="M:GPLA.Shape.setX(System.Int32)">
-            <summary>
-            X setter
-            </summary>
-            <param name="x"></param>
-        </member>
-        <member name="M:GPLA.Shape.getX">
-            <summary>
-            X getter
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:GPLA.Shape.setY(System.Int32)">
-            <summary>
-            Y setter
-            </summary>
-            <param name="y"></param>
-        </member>
-        <member name="M:GPLA.Shape.getY">
-            <summary>
-            Y getter
-            </summary>
-            <returns></returns>
+            default constructor        
         </member>
         <member name="M:GPLA.Shape.draw(System.Drawing.Graphics,System.Drawing.Color,System.Int32)">
-            <summary>
-            draw method
-            </summary>
-            <param name="g"></param>
+            end of getter setter
+             draw method
         </member>
         <member name="T:GPLA.ShapeFactory">
-            <summary>
-            Factory class to get required shape
-            </summary>
+            ShapeFactory class interits AbstractFactory
         </member>
         <member name="M:GPLA.ShapeFactory.getShape(System.String)">
-            <summary>
-            Method to get required shape
-            </summary>
-            <param name="shapeType"></param>
-            <returns></returns>
+            Method to get required shape       
         </member>
         <member name="T:GPLA.ShapeFactoryDefination">
-            simple shape factory definition class
+            ShapeFactoryDefination class created
         </member>
         <member name="M:GPLA.ShapeFactoryDefination.isCircle(System.String)">
-            method to check if shape is circle        
+            Check if desired shape is circle or not
         </member>
         <member name="M:GPLA.ShapeFactoryDefination.isRectangle(System.String)">
-            <summary>
-            method to check if shape is rectangle
-            </summary>
-            <param name="shape"></param>
-            <returns></returns>
+            Check if desired shape is rectangle or not
         </member>
         <member name="T:GPLA.Properties.Resources">
             <summary>

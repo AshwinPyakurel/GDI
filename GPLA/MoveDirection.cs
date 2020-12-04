@@ -6,22 +6,17 @@ using System.Threading.Tasks;
 
 namespace GPLA
 {
-    /// <summary>
-    /// move direction class 
-    /// </summary>
+    
+    /// Move direction class created
+    
     class MoveDirection
     {
-        /// <summary>
-        /// move default constructor
-        /// </summary>
+        /// default constructor
         public MoveDirection()
         {
 
         }
-
-        /// <summary>
-        /// getter and setter
-        /// </summary>
+        /// getter and setter      
         public int x { get; set; }
         public int y { get; set; }
     }
