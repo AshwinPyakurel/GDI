@@ -1,0 +1,193 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GPLA</name>
+    </assembly>
+    <members>
+        <member name="M:GPLA.Circle.#ctor">
+            default constructor
+        </member>
+        <member name="M:GPLA.Circle.#ctor(System.Int32,System.Int32)">
+            parameterized constructor        
+        </member>
+        <member name="M:GPLA.Circle.draw(System.Drawing.Graphics,System.Drawing.Color,System.Int32)">
+            draw method       
+        </member>
+        <member name="M:GPLA.FactoryProducer.getFactory(System.String)">
+            method to create factory of different type like shape, color        
+            <param name="choice"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GPLA.FactoryProducerDefination">
+            <summary>
+            Simple Factory definition class
+            </summary>
+        </member>
+        <member name="M:GPLA.FactoryProducerDefination.isShape(System.String)">
+            <summary>
+            checks whether the type is shape or color
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="F:GPLA.frmGDI.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:GPLA.frmGDI.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:GPLA.frmGDI.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:GPLA.MoveDirection">
+            <summary>
+            move direction class 
+            </summary>
+        </member>
+        <member name="M:GPLA.MoveDirection.#ctor">
+            <summary>
+            move default constructor
+            </summary>
+        </member>
+        <member name="P:GPLA.MoveDirection.x">
+            <summary>
+            getter and setter
+            </summary>
+        </member>
+        <member name="M:GPLA.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="M:GPLA.Rectangle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            Parameterized constructor        
+        </member>
+        <member name="M:GPLA.Rectangle.#ctor(System.Int32,System.Int32)">
+            another parameterized constructor        
+        </member>
+        <member name="M:GPLA.Rectangle.#ctor">
+            default constructor       
+        </member>
+        <member name="M:GPLA.Rectangle.draw(System.Drawing.Graphics,System.Drawing.Color,System.Int32)">
+            <summary>
+            draw method
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="M:GPLA.Rectangle.setHeight(System.Int32)">
+            <summary>
+            height setter
+            </summary>
+            <param name="height"></param>
+        </member>
+        <member name="M:GPLA.Rectangle.getHeight">
+            <summary>
+            height getter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GPLA.Rectangle.setWidth(System.Int32)">
+            <summary>
+            width setter
+            </summary>
+            <param name="width"></param>
+        </member>
+        <member name="M:GPLA.Rectangle.getWidth">
+            <summary>
+            width getter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GPLA.Shape.#ctor(System.Int32,System.Int32)">
+            <summary>
+            parameterized constructor
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+        </member>
+        <member name="M:GPLA.Shape.#ctor">
+            <summary>
+            default constructor
+            </summary>
+        </member>
+        <member name="M:GPLA.Shape.setX(System.Int32)">
+            <summary>
+            X setter
+            </summary>
+            <param name="x"></param>
+        </member>
+        <member name="M:GPLA.Shape.getX">
+            <summary>
+            X getter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GPLA.Shape.setY(System.Int32)">
+            <summary>
+            Y setter
+            </summary>
+            <param name="y"></param>
+        </member>
+        <member name="M:GPLA.Shape.getY">
+            <summary>
+            Y getter
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:GPLA.Shape.draw(System.Drawing.Graphics,System.Drawing.Color,System.Int32)">
+            <summary>
+            draw method
+            </summary>
+            <param name="g"></param>
+        </member>
+        <member name="T:GPLA.ShapeFactory">
+            <summary>
+            Factory class to get required shape
+            </summary>
+        </member>
+        <member name="M:GPLA.ShapeFactory.getShape(System.String)">
+            <summary>
+            Method to get required shape
+            </summary>
+            <param name="shapeType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GPLA.ShapeFactoryDefination">
+            simple shape factory definition class
+        </member>
+        <member name="M:GPLA.ShapeFactoryDefination.isCircle(System.String)">
+            method to check if shape is circle        
+        </member>
+        <member name="M:GPLA.ShapeFactoryDefination.isRectangle(System.String)">
+            <summary>
+            method to check if shape is rectangle
+            </summary>
+            <param name="shape"></param>
+            <returns></returns>
+        </member>
+        <member name="T:GPLA.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:GPLA.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:GPLA.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

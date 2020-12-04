@@ -15,53 +15,29 @@ namespace GPLA
     //fromGDI extending form class
     public partial class frmGDI : Form
     {
-
-
-        Shape shape1, shape2; //shapefactory declaration
-
-        //Individual object List for shapes
-        List<Circle> circleObjects;
-        List<Rectangle> rectangleObjects;
-        List<Line> lineObjects;
-        List<Polygon> polygonObjects;
-        List<MoveDirection> moveObjects;
-
         //variable declaration for shapes
         Circle circle; 
         Polygon polygon;
         Rectangle rectangle; 
-        Line line;
         //end of variable declaration
         Boolean drawCircle, drawRect, drawPolgon, drawLine; //boolean value for checking shapes
         String program; //string to hold textarea info
         String[] words; //words of the individual program 
         int moveX, moveY; //cursor moving direction points
-        int counter; //loop code counter
         int thickness; //thickness of pen
-        int loopCounter; //loopcounter to hold loop value in loop code
 
-        private void FrmGPLA_Load(object sender, EventArgs e)
-        {
-            circle = new Circle(); //instantiang circle
-            rectangle = new Rectangle(); //instantiang rectangle
-            circleObjects = new List<Circle>(); //Array declaration of circle objects
-            rectangleObjects = new List<Rectangle>(); //Array declaration of rectangle objects
-            lineObjects = new List<Line>();
-            moveObjects = new List<MoveDirection>(); //Array declaration for moving objects
-            polygonObjects = new List<Polygon>(); //Array declaration of circle objects
-
-             c = Color.DarkGreen;
-
-        }
+       
         Color c;
         Point point; //Point on the drawing panel
         string actionCmd;
         string console_text;
 
-        /*private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }*/
+        Shape shape1, shape2; //shapefactory declaration
+        //Individual object List for shapes
+        List<Circle> circleObjects;
+        List<Rectangle> rectangleObjects;
+        List<Polygon> polygonObjects;
+        List<MoveDirection> moveObjects;
 
         public frmGDI()
         {
@@ -71,19 +47,28 @@ namespace GPLA
             shape1 = shapeFactory.getShape("Circle");
             shape2 = shapeFactory.getShape("Rectangle");
         }
+        private void FrmGPLA_Load(object sender, EventArgs e)
+        {
+            circle = new Circle(); //instantiang circle
+            rectangle = new Rectangle(); //instantiang rectangle
+            circleObjects = new List<Circle>(); //Array declaration of circle objects
+            rectangleObjects = new List<Rectangle>(); //Array declaration of rectangle objects
+            moveObjects = new List<MoveDirection>(); //Array declaration for moving objects
+            polygonObjects = new List<Polygon>(); //Array declaration of circle objects
 
+            c = Color.DarkGreen;
+
+        }
         private void txt_ActionCmd_TextChanged(object sender, EventArgs e)
         {
-             actionCmd = txt_ActionCmd.Text;
+             actionCmd = txt_ExecutionCmd.Text.ToLower();
         }
-
-      
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                File.WriteAllText(saveFileDialog1.FileName, rtxt_code.Text);
+                File.WriteAllText(saveFileDialog1.FileName, txt_SyntaxArea.Text);
             }
         }
 
@@ -92,13 +77,13 @@ namespace GPLA
             //opens diaglog box when button click to load the code.
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                rtxt_code.Text = File.ReadAllText(openFileDialog1.FileName);
+                txt_SyntaxArea.Text = File.ReadAllText(openFileDialog1.FileName);
             }
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Some Examples are:\n" +
+            MessageBox.Show("For Your Help:\n" +
                 "draw circle 100\n" +
                 "draw rectangle 100 50\n" +
                 "draw polygon\n" +
@@ -113,7 +98,7 @@ namespace GPLA
                 case "run":
                     try
                     {                        
-                        program = rtxt_code.Text;                                                
+                        program = txt_SyntaxArea.Text.ToLower();                                                
                         char[] delimiters = new char[] { '\r', '\n' };
                         string[] parts = program.Split(delimiters, StringSplitOptions.RemoveEmptyEntries); //holds invididuals code line on the basis of delimiters
                         console_text = "Program code: \n";
@@ -127,7 +112,6 @@ namespace GPLA
                         //loop through the whole program code line
                         for (int i = 0; i < parts.Length; i++)
                         {
-
                             //single code line
                             String code_line = parts[i];
 
@@ -137,13 +121,11 @@ namespace GPLA
                             //condition to check if "draw" then
                             if (words[0].Equals("draw"))
                             {
-                                counter += 1;//value to increment draw circle method
-
                                 if (words[1] == "circle") // condition to check if "circle" then
                                 {
                                     if (!(words.Length == 3)) //checks if written code is correct or not
                                     {
-                                        MessageBox.Show("Enter correct command");
+                                        MessageBox.Show("Enter correct command and parameter");
                                         console_text += "View the correct Command: \n e.g. draw circle 100 or draw circle r \n\n";
                                     }
                                     else
@@ -204,8 +186,8 @@ namespace GPLA
                             }
                             if (words[0] == "move") // condition to check if "move" then
                             {
-                                if (Convert.ToInt32(words[1]) == pbOutput.Location.X &&
-                                    Convert.ToInt32(words[2]) == pbOutput.Location.Y)//checks cursor position
+                                if (Convert.ToInt32(words[1]) == shapeMovement.Location.X &&
+                                    Convert.ToInt32(words[2]) == shapeMovement.Location.Y)//checks cursor position
                                 {
                                     //MessageBox.Show("don't move");
                                     console_text += "Its in requested position\n\n";
@@ -256,18 +238,18 @@ namespace GPLA
                     {
                         console_text += "!!Please input correct parameter!!\n\n";
                     }
-                    panel_output.Refresh(); //refresh with every drawing equals to true
+                    pnl_DisplayOutput.Refresh(); //refresh with every drawing equals to true
                     break;
                 case "clear":
                     circleObjects.Clear();
                     rectangleObjects.Clear();
                     moveObjects.Clear();
                     polygonObjects.Clear();
-                    drawPolgon = false;
+                    this.drawPolgon = false;
                     this.drawCircle = false;
                     this.drawRect = false;
-                    this.rtxt_code.Clear();
-                    panel_output.Refresh();
+                    this.txt_SyntaxArea.Clear();
+                    pnl_DisplayOutput.Refresh();
                     break;
                 default:
                     MessageBox.Show("The action command is empty\n" +
@@ -282,7 +264,6 @@ namespace GPLA
         {
             //Graphics to draw in panel
             Graphics g = e.Graphics;
-
             if (drawCircle == true)//draw circle condition
             {
                 foreach (Circle circleObject in circleObjects)
@@ -300,41 +281,30 @@ namespace GPLA
                     rectangleObject.draw(g, c, thickness); //draw circle with given graphics
                 }
             }
-            if (drawLine == true)
-            {
-                foreach (Line lineObject in lineObjects)
-                {
-                    console_text += "Drawing Line\n\n";
-                    lineObject.draw(g, c, thickness); //draw line with given graphics
-                }
-            }
 
             if (drawPolgon == true)
             {
                 Pen blackPen = new Pen(c, thickness);
                 PointF point1 = new PointF(50.0F, 50.0F);
-                PointF point2 = new PointF(100.0F, 25.0F);
-                PointF point3 = new PointF(200.0F, 5.0F);
-                PointF point4 = new PointF(250.0F, 50.0F);
-                PointF point5 = new PointF(300.0F, 100.0F);
-                PointF point6 = new PointF(350.0F, 200.0F);
-                PointF point7 = new PointF(250.0F, 250.0F);
+                PointF point2 = new PointF(50.0F, 25.0F);
+                PointF point3 = new PointF(100.0F, 5.0F);
+                PointF point4 = new PointF(150.0F, 20.0F);
+                PointF point5 = new PointF(200.0F, 50.0F);
+                PointF point6 = new PointF(250.0F, 100.0F);
+                PointF point7 = new PointF(250.0F, 150.0F);
                 string[] str = new string[5];
                 PointF[] curvePoints =
                  {
-                point1,
-                 point2,
-                 point3,
-                 point4,
-                 point5,
-                 point6,
-                 point7
-             };
+                     point1,
+                     point2,
+                     point3,
+                     point4,
+                     point5,
+                     point6,
+                     point7
+                 };
                 e.Graphics.DrawPolygon(blackPen, curvePoints);
             }
-         
         }
-       
-
     }
 }

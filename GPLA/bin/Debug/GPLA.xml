@@ -161,16 +161,10 @@
             <returns></returns>
         </member>
         <member name="T:GPLA.ShapeFactoryDefination">
-            <summary>
             simple shape factory definition class
-            </summary>
         </member>
         <member name="M:GPLA.ShapeFactoryDefination.isCircle(System.String)">
-            <summary>
-            method to check if shape is circle
-            </summary>
-            <param name="shape"></param>
-            <returns></returns>
+            method to check if shape is circle        
         </member>
         <member name="M:GPLA.ShapeFactoryDefination.isRectangle(System.String)">
             <summary>

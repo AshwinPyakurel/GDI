@@ -63,7 +63,6 @@
     <Compile Include="frmGDI.Designer.cs">
       <DependentUpon>frmGDI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Line.cs" />
     <Compile Include="MoveDirection.cs" />
     <Compile Include="Polygon.cs" />
     <Compile Include="Program.cs" />
