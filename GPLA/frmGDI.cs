@@ -25,12 +25,13 @@ namespace GPLA
         String[] words; //words of the individual program 
         int moveX, moveY; //cursor moving direction points
         int thickness; //thickness of pen
-
+		int loopCount; //to end the loop
        
         Color c;
         Point point; //Point on the drawing panel
         string actionCmd;
         string console_text;
+		int counter;
 
         Shape shape1, shape2; //shapefactory declaration
         //Individual object List for shapes
@@ -109,124 +110,206 @@ namespace GPLA
                         console_text += "\n\n";
 
 
-                        //loop through the whole program code line
-                        for (int i = 0; i < parts.Length; i++)
-                        {
-                            //single code line
-                            String code_line = parts[i];
+						//loop through the whole program code line
+						for (int i = 0; i < parts.Length; i++)
+						{
+							//single code line
+							String code_line = parts[i];
 
-                            char[] code_delimiters = new char[] { ' ' };
-                            words = code_line.Split(code_delimiters, StringSplitOptions.RemoveEmptyEntries); //holds invididuals code line
+							char[] code_delimiters = new char[] { ' ' };
+							words = code_line.Split(code_delimiters, StringSplitOptions.RemoveEmptyEntries); //holds invididuals code line
 
-                            //check if draw or not
-                            if (words[0].Equals("draw"))
-                            {
-                                if (words[1] == "circle") // check if its is circle or not
-                                {
-                                    if (!(words.Length == 3)) //Check for the user input command
-                                    {
-                                        MessageBox.Show("Enter correct command and parameter");
-                                        console_text += "View the correct Command: \n e.g. draw circle 100 or draw circle r \n\n";
-                                    }
-                                    else
-                                    {
-                                        if (circleObjects.Exists(x => x.getX() == moveX && x.getY() == moveY
-                                        && x.getRadius() == Convert.ToInt32(words[2])) == true)                                        
-                                        //check for the x,y,radius exists or not
-                                        {
-                                            console_text += "!!circle already exists with the given value!!\n\n";
+							//check if draw or not
+							if (words[0].Equals("draw"))
+							{
+								if (words[1] == "circle") // check if its is circle or not
+								{
+									if (!(words.Length == 3)) //Check for the user input command
+									{
+										MessageBox.Show("Enter correct command and parameter");
+										console_text += "View the correct Command: \n e.g. draw circle 100 or draw circle r \n\n";
+									}
+									else
+									{
+										if (circleObjects.Exists(x => x.getX() == moveX && x.getY() == moveY
+										&& x.getRadius() == Convert.ToInt32(words[2])) == true)
+										//check for the x,y,radius exists or not
+										{
+											console_text += "!!circle already exists with the given value!!\n\n";
 
-                                        }
-                                        else
-                                        {//Create a new circle
-                                            Circle circle = new Circle();
-                                            circle.setX(moveX);
-                                            circle.setY(moveY);
-                                            circle.setRadius(Convert.ToInt32(words[2]));
-                                            circleObjects.Add(circle);
-                                            drawCircle = true;
-                                            console_text += "Adding new circle\n\n";
-                                        }
-                                    }
-                                }
-                                if (words[1].Equals("rectangle")) // 
-                                {
-                                    //MessageBox.Show(moveX.ToString());
-                                    if (!(words.Length == 4)) //Parameter value check
-                                    {
-                                        MessageBox.Show("Enter correct command");
-                                        console_text += "View the correct Command:: \n e.g. draw rectangle 100 100 or draw circle h w \n\n";
-                                    }
-                                    else
-                                    {
-                                        if (rectangleObjects.Exists(x => x.getX() == moveX && x.getY() == moveY
-                                        && x.getHeight() == Convert.ToInt32(words[2]) && x.getWidth() ==
-                                        Convert.ToInt32(words[3])) == true)//check for the x,y,radius exists or not
-                                        {
-                                            console_text += "!!rectangle object exists with given parameters!!\n\n";
-                                        }
-                                        else
-                                        {//create a new rectangle
-                                            Rectangle rect = new Rectangle();
-                                            rect.setX(moveX);
-                                            rect.setY(moveY);
-                                            rect.setHeight(Convert.ToInt32(words[2]));
-                                            rect.setWidth(Convert.ToInt32(words[3]));
-                                            rectangleObjects.Add(rect);
-                                            drawRect = true;
-                                            console_text += "Adding new rectangle\n\n";
-                                        }
-                                    }
-                                }
+										}
+										else
+										{//Create a new circle
+											Circle circle = new Circle();
+											circle.setX(moveX);
+											circle.setY(moveY);
+											circle.setRadius(Convert.ToInt32(words[2]));
+											circleObjects.Add(circle);
+											drawCircle = true;
+											console_text += "Adding new circle\n\n";
+										}
+									}
+								}
+								if (words[1].Equals("rectangle")) // 
+								{
+									//MessageBox.Show(moveX.ToString());
+									if (!(words.Length == 4)) //Parameter value check
+									{
+										MessageBox.Show("Enter correct command");
+										console_text += "View the correct Command:: \n e.g. draw rectangle 100 100 or draw circle h w \n\n";
+									}
+									else
+									{
+										if (rectangleObjects.Exists(x => x.getX() == moveX && x.getY() == moveY
+										&& x.getHeight() == Convert.ToInt32(words[2]) && x.getWidth() ==
+										Convert.ToInt32(words[3])) == true)//check for the x,y,radius exists or not
+										{
+											console_text += "!!rectangle object exists with given parameters!!\n\n";
+										}
+										else
+										{//create a new rectangle
+											Rectangle rect = new Rectangle();
+											rect.setX(moveX);
+											rect.setY(moveY);
+											rect.setHeight(Convert.ToInt32(words[2]));
+											rect.setWidth(Convert.ToInt32(words[3]));
+											rectangleObjects.Add(rect);
+											drawRect = true;
+											console_text += "Adding new rectangle\n\n";
+										}
+									}
+								}
 
-                                if (words[1].Equals("polygon"))
-                                {
-                                    drawPolgon = true;
-                                }
-                            }
-                            if (words[0] == "move") // check if moved or not
-                            {
-                                if (Convert.ToInt32(words[1]) == shapeMovement.Location.X &&
-                                    Convert.ToInt32(words[2]) == shapeMovement.Location.Y)//Cursor Position check
-                                {
-                                    //MessageBox.Show("don't move");
-                                    console_text += "Its in requested position\n\n";
-                                }
-                                else
-                                {
-                                    moveX = Convert.ToInt32(words[1]);
-                                    moveY = Convert.ToInt32(words[2]);
-                                    console_text += "X=" + moveX + "\n" + "Y=" + moveY + "\n\n";
-                                }
-                            }
-                            if (words[0] == "color")
-                            {
-                                thickness = Convert.ToInt32(words[2]);
+								if (words[1].Equals("polygon"))
+								{
+									drawPolgon = true;
+								}
+							}
+							if (words[0] == "move") // check if moved or not
+							{
+								if (Convert.ToInt32(words[1]) == shapeMovement.Location.X &&
+									Convert.ToInt32(words[2]) == shapeMovement.Location.Y)//Cursor Position check
+								{
+									//MessageBox.Show("don't move");
+									console_text += "Its in requested position\n\n";
+								}
+								else
+								{
+									moveX = Convert.ToInt32(words[1]);
+									moveY = Convert.ToInt32(words[2]);
+									console_text += "X=" + moveX + "\n" + "Y=" + moveY + "\n\n";
+								}
+							}
+							if (words[0] == "color")
+							{
+								thickness = Convert.ToInt32(words[2]);
 
-                                if (words[1] == "red")
-                                {
-                                    c = Color.Red;
-                                    console_text += "Pen is of red color\n\n";
-                                }
-                                else if (words[1] == "blue")
-                                {
-                                    c = Color.Blue;
-                                    console_text += "Pen is of blue color\n\n";
-                                }
-                                else if (words[1] == "yellow")
-                                {
-                                    c = Color.Yellow;
-                                    console_text += "Pen is of yellow color\n\n";
-                                }
-                                else
-                                {
-                                    c = Color.Green;
-                                    console_text += "Pen is of green color\n\n";
-                                }
-                            }
-                        }
+								if (words[1] == "red")
+								{
+									c = Color.Red;
+									console_text += "Pen is of red color\n\n";
+								}
+								else if (words[1] == "blue")
+								{
+									c = Color.Blue;
+									console_text += "Pen is of blue color\n\n";
+								}
+								else if (words[1] == "yellow")
+								{
+									c = Color.Yellow;
+									console_text += "Pen is of yellow color\n\n";
+								}
+								else
+								{
+									c = Color.Green;
+									console_text += "Pen is of green color\n\n";
+								}
+							}
+
+							if (words[0] == "r")
+							{
+								int radius_circle = Convert.ToInt32(words[2]);
+								//Create a new circle with provided radius
+								Circle circle = new Circle();
+								circle.setX(moveX);
+								circle.setY(moveY);
+								circle.setRadius(Convert.ToInt32(radius_circle));
+								circleObjects.Add(circle);
+								drawCircle = true;
+								console_text += "Adding new circle with given circle paramter \n\n";
+							}
+
+
+							if (words[0] == "counter")
+							{
+								counter = Convert.ToInt32(words[2]);
+							}
+
+							if (words[0] == "if")
+							{
+								//check for assigned variable
+								int counter_check = Convert.ToInt32(words[3]);
+								if (counter_check == counter)
+								{
+									console_text += "Entered into if statement\n\n";
+
+								}
+								else
+								{//directed to end if line
+									i = Array.IndexOf(parts, "end if");
+								}
+							}
+
+
+							if (parts[i] == "end loop") // code for end loop statement
+							{
+								if (counter < loopCount) //if counter to draw is not less than loop counter
+								{
+									i = Array.IndexOf(parts, "loop " + loopCount);
+								}
+								else // keep drawing
+								{
+									i = Array.IndexOf(parts, "end loop");
+								}
+							}
+						}
+
+
+						//	if (words[0] == "counter")
+						//	{
+						//		String counter_check = parts[i +1];
+						//		char[] counter_line = new char[] { ' ' };
+						//		String[] check = counter_check.Split(counter_line,StringSplitOptions.RemoveEmptyEntries);
+						//		if(words[2] == check[3])
+						//		{
+						//			String circle_check = parts[i + 2];
+						//			char[] circle_draw_line = new char[] { ' ' };
+						//			String[] check_circle_radius = circle_check.Split(circle_draw_line, StringSplitOptions.RemoveEmptyEntries);
+						//			int radius_circle = Convert.ToInt32(check_circle_radius[2]);
+						//			Circle circle = new Circle();
+						//			circle.setX(moveX);
+						//			circle.setY(moveY);
+						//			circle.setRadius(Convert.ToInt32(radius_circle));
+						//			circleObjects.Add(circle);
+						//			drawCircle = true;
+						//			console_text += "Adding new circle with given circle paramter \n\n";
+						//		}
+						//		else
+						//		{//directed to end if line
+						//				i = Array.IndexOf(parts, "end if");
+						//		}
+								
+						//	}
+						//	else
+						//	{//directed to end if line
+						//		i = Array.IndexOf(parts, "end if");
+						//	}
+
+						//}
                     }
-                    catch (IndexOutOfRangeException ex)
+
+
+					catch (IndexOutOfRangeException ex)
                     {
                         console_text += "Error: " + ex.Message + "\n\n";
                     }
